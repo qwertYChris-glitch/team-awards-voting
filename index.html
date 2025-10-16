@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Team Awards Voting</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Team Awards Voting</h1>
+  <p>Enter your name, choose, and give your reasons.</p>
+
+  <div>
+    <label for="voterName">Your Name:</label>
+    <input type="text" id="voterName" required />
+  </div>
+
+  <div>
+    <h2>Best All-Round Team Player</h2>
+    <label for="allround">Select one:</label>
+    <select id="allround">
+      <option value="">--Choose--</option>
+      <option value="Lynette">Lynette</option>
+      <option value="Keiko">Keiko</option>
+      <option value="Edgar">Edgar</option>
+      <option value="Remano">Remano</option>
+      <option value="Antin">Antin</option>
+      <option value="Llano">Llano</option>
+    </select>
+    <label for="allroundReason">Reason:</label>
+    <textarea id="allroundReason" rows="3" required></textarea>
+  </div>
+
+  <div>
+    <h2>Best Team Spirit</h2>
+    <label for="teamSpirit">Select one:</label>
+    <select id="teamSpirit">
+      <option value="">--Choose--</option>
+      <option value="Lynette">Lynette</option>
+      <option value="Keiko">Keiko</option>
+      <option value="Edgar">Edgar</option>
+      <option value="Remano">Remano</option>
+      <option value="Antin">Antin</option>
+      <option value="Llano">Llano</option>
+    </select>
+    <label for="teamSpiritReason">Reason:</label>
+    <textarea id="teamSpiritReason" rows="3" required></textarea>
+  </div>
+
+  <button onclick="submitVote()">Submit Vote</button>
+
+  <hr />
+
+  <h2>Admin Results</h2>
+  <p>Enter password to view results:</p>
+  <input type="password" id="adminPass" />
+  <button onclick="viewResults()">View Results</button>
+
+  <div id="results" style="display:none">
+    <h3>Vote Results</h3>
+    <table id="resultsTable">
+      <thead>
+        <tr><th>Voter</th><th>Award</th><th>Employee</th><th>Reason</th></tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <h3>Winners</h3>
+    <table id="winnerTable">
+      <thead>
+        <tr><th>Award</th><th>Winner</th><th>Votes</th></tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
