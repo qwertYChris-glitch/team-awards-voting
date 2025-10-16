@@ -1,0 +1,78 @@
+!DOCTYPE html
+html lang=en
+head
+  meta charset=UTF-8 
+  meta name=viewport content=width=device-width, initial-scale=1.0 
+  titleTeam Awards Votingtitle
+  link rel=stylesheet href=style.css 
+head
+body
+  h1Team Awards Votingh1
+  pEnter your name, choose, and give your reasons.p
+
+  div
+    label for=voterNameYour Namelabel
+    input type=text id=voterName required 
+  div
+
+  div
+    h2Best All-Round Team Playerh2
+    label for=allroundSelect onelabel
+    select id=allround
+      option value=--Choose--option
+      option value=LynetteLynetteoption
+      option value=KeikoKeikooption
+      option value=EdgarEdgaroption
+      option value=RemanoRemanooption
+      option value=AntinAntinoption
+      option value=LlanoLlanooption
+    select
+    label for=allroundReasonReasonlabel
+    textarea id=allroundReason rows=3 requiredtextarea
+  div
+
+  div
+    h2Best Team Spirith2
+    label for=teamSpiritSelect onelabel
+    select id=teamSpirit
+      option value=--Choose--option
+      option value=LynetteLynetteoption
+      option value=KeikoKeikooption
+      option value=EdgarEdgaroption
+      option value=RemanoRemanooption
+      option value=AntinAntinoption
+      option value=LlanoLlanooption
+    select
+    label for=teamSpiritReasonReasonlabel
+    textarea id=teamSpiritReason rows=3 requiredtextarea
+  div
+
+  button onclick=submitVote()Submit Votebutton
+
+  hr 
+
+  h2Admin Resultsh2
+  pEnter password to view resultsp
+  input type=password id=adminPass 
+  button onclick=viewResults()View Resultsbutton
+
+  div id=results style=displaynone
+    h3Vote Resultsh3
+    table id=resultsTable
+      thead
+        trthVoterththAwardththEmployeeththReasonthtr
+      thead
+      tbodytbody
+    table
+    h3Winnersh3
+    table id=winnerTable
+      thead
+        trthAwardththWinnerththVotesthtr
+      thead
+      tbodytbody
+    table
+  div
+
+  script src=script.jsscript
+body
+html
